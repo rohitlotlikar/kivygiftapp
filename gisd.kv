@@ -1,0 +1,1413 @@
+<MainWindow>:
+    canvas.before:
+        Color:
+            rgba: 0.549, .8549, 1, 1
+        Rectangle:
+            size: self.width,self.height
+    name:"main"
+    FloatLayout:
+        
+        Label:
+            text:"Welcome"
+            color: 0.949,.46667,.957255,0.8
+            font_name:'alex'
+            size_hint:0.5,0.2
+            pos_hint:{"x":0.25,"top":0.9}
+            font_size: (root.width**2 + root.height**2)*2 / 11**4
+        Label:
+            text:"To gifty"
+            color: 0.949,.46667,.957255,0.8
+            size_hint:0.3,0.1
+            font_name:'alex'
+            pos_hint:{"x":0.35,"top":0.6}
+            font_size: (root.width**2 + root.height**2) / 10**4
+        Button:
+            text:"ENTER"
+            font_name:'great'
+            color:0.549, .8549, 1, 1
+            background_color:0.949,.46667,.957255,0.7
+            size_hint:0.8,0.19
+            pos_hint:{"x":0.1,"top":0.3}
+            font_size: (root.width**2 + root.height**2) / 12**4           
+            on_release:
+                root.next()
+                root.manager.transition.direction="left"
+                
+                
+
+<SecondWindow>:
+    canvas.before:
+        Color:
+            rgba:1,.682353,0.7882353,1
+        Rectangle:
+            size:root.width,root.height
+    name:"second"
+    FloatLayout:
+        size: root.width, root.height
+        Label
+            text:"SELECT THE OCASSION"
+            font_name:'jack'
+            color:0.9098,0.4,0.41176,0.75
+            size_hint:0.9,0.2
+            pos_hint:{"x":0.05,"top":1}
+            font_size: (root.width**2 + root.height**2) / 12**4
+        Button:
+            text:"BIRTHDAY"
+            font_name:'jack'
+            background_color:0.9098,0.4,0.41176,.75
+            color:1,.682353,0.7882353,1
+            size_hint:0.8,0.12
+            pos_hint:{"x":0.1,"top":0.75}
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction="left"
+                root.birth()
+        Button:
+            text:"WEDDING"
+            font_name:'jack'
+            background_color:0.9098,0.4,0.41176,.75
+            color:1,.682353,0.7882353,1
+
+            size_hint:0.8,0.12
+            pos_hint:{"x":0.1,"top":0.55}
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction="left"
+                root.wed()
+            
+        Button:
+            text:"ANNIVERSARY"
+            font_name:'jack'
+            background_color:0.9098,0.4,0.41176,.75
+            color:1,.682353,0.7882353,1
+            size_hint:0.8,0.12
+            pos_hint:{"x":0.1,"top":0.35}
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction="left"
+                root.anni()
+            
+        Button:
+            text:"GO BACK"
+            font_name:'jack'
+            background_color:0.9098,0.4,0.41176,0.75
+            color:1,.682353,0.7882353,1
+            size_hint:0.8,0.12
+            pos_hint:{"x":0.1,"top":0.15}
+            font_size: (root.width**2 + root.height**2) / 14**4
+            on_release:
+                root.manager.transition.direction="right"
+                root.back()
+
+<BirthWindow>:
+    canvas.before:
+        Color:
+            rgba:1,1,0.50196,1
+        Rectangle:
+            size:root.width,root.height
+    name:"birth"
+    FloatLayout:
+        size:root.width,root.height
+        Button:
+            text:"1-5th"
+            font_name:'lob'
+            background_color:1,0.603921,0.207843,0.75
+            color:1,1,0.50196,1
+            size_hint:0.6,0.1
+            pos_hint:{"x":0.2,"top":1}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="up"
+                root.b15()
+
+        Button:
+            text:"6-10th"
+            font_name:'lob'
+            background_color:1,0.603921,0.207843,0.75
+            color:1,1,0.50196,1
+            size_hint:0.6,0.1
+            pos_hint:{"x":0.2,"top":0.875}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="up"
+                root.b510()
+        
+        Button:
+            text:"11-15th"
+            font_name:'lob'
+            background_color:1,0.603921,0.207843,0.75
+            color:1,1,0.50196,1
+            size_hint:0.6,0.1
+            pos_hint:{"x":0.2,"top":0.75}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="up"
+                root.b1015()
+
+        Button:
+            text:"16-20th"
+            font_name:'lob'
+            background_color:1,0.603921,0.207843,0.75
+            color:1,1,0.50196,1
+            size_hint:0.6,0.1
+            pos_hint:{"x":0.2,"top":0.625}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="up"
+                root.b1620()
+
+        Button:
+            text:"20-40th"
+            font_name:'lob'
+            background_color:1,0.603921,0.207843,0.75
+            color:1,1,0.50196,1
+            size_hint:0.6,0.1
+            pos_hint:{"x":0.2,"top":0.5}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="up"
+                root.b2040()
+
+        Button:
+            text:"40-60th"
+            font_name:'lob'
+            background_color:1,0.603921,0.207843,0.75
+            color:1,1,0.50196,1
+            size_hint:0.6,0.1
+            pos_hint:{"x":0.2,"top":0.375}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="up"
+                root.b4060()
+        
+        Button:
+            text:"60+"
+            font_name:'lob'
+            background_color:1,0.603921,0.207843,0.75
+            color:1,1,0.50196,1
+            size_hint:0.6,0.1
+            pos_hint:{"x":0.2,"top":0.25}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="up"
+                root.b60()
+
+        Button:
+            text:"GO BACK"
+            font_name:'lob'
+            background_color:1,0.603921,0.207843,0.75
+            color:1,1,0.50196,1
+            size_hint:0.6,0.1
+            pos_hint:{"x":0.2,"top":0.125}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.ocas()
+                root.manager.transition.direction="right"
+<b1to5Window>:
+    canvas.before:
+        Color:
+            rgba:1,1,0.50196,1
+        Rectangle:
+            size:root.width,root.height
+    name:"b1-5"
+    FloatLayout:
+        size:root.width,root.height
+        Label:
+            text:"GIFTS FOR 1 TO 5 YEARS OLD"
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":1}
+            size_hint:0.8,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"TEDDY BEAR" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING TEDDYBEAR"
+            font_name:'lob'
+            background_color:1,0.603921,0.207843,0.85
+            color:1,1,0.50196,1
+            pos_hint:{"x":0.5,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findteddy()
+
+        Label:
+            text:"TOY CYCLE" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING TOY CYCLE"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findtoycycle()
+
+        Label:
+            text:"DOLL" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING DOLLS"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.finddoll()
+
+        Label:
+            text:"STORY BOOKS" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            
+            pos_hint:{"x":0.1,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING STORY BOOKS"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findbooks()
+
+        Button:
+            text:"GO BACK"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.1,"top":.17}
+            size_hint:0.8,0.17
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="down"
+
+        
+<b5to10Window>:
+    canvas.before:
+        Color:
+            rgba:1,1,0.50196,1
+        Rectangle:
+            size:root.width,root.height
+    name:"b5-10"
+    FloatLayout:
+        size:root.width,root.height
+        Label:
+            text:"GIFTS FOR 6 TO 10 YEARS OLD"
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":1}
+            size_hint:0.8,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"TRICYCLE" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING TRICYCLE"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findtricycle()
+
+        Label:
+            text:"COLORING BOOKS" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING COLORING BOOKS"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findcolorbook()
+
+        Label:
+            text:"WATER BOTTLE" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING WATER BOTTLE"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findwaterbottle()
+
+        Label:
+            text:"STORY BOOKS" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING STORY BOOKS"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findbooks()
+
+        Button:
+            text:"GO BACK"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.1,"top":.17}
+            size_hint:0.8,0.17
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="right"
+
+<b10to15Window>:
+    canvas.before:
+        Color:
+            rgba:1,1,0.50196,1
+        Rectangle:
+            size:root.width,root.height
+    name:"b10-15"
+    FloatLayout:
+        size:root.width,root.height
+        Label:
+            text:"GIFTS FOR 11 TO 15 YEARS OLD"
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":1}
+            size_hint:0.8,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"SCHOOL KIT" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SCHOOL KIT"
+            pos_hint:{"x":0.5,"top":.834}
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findschoolkit()
+
+        Label:
+            text:"SCHOOL BAG" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SCHOOL BAG"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findschoolbag()
+
+        Label:
+            text:"RC CAR" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING RC CAR"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findrccar()
+
+        Label:
+            text:"WATER BOOTLE" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING WATER BOOTLE"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findwaterbottle()
+
+        Button:
+            text:"GO BACK"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.1,"top":.17}
+            size_hint:0.8,0.17
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="right"
+
+<b16to20Window>:
+    canvas.before:
+        Color:
+            rgba:1,1,0.50196,1
+        Rectangle:
+            size:root.width,root.height
+    name:"b16-20"
+    FloatLayout:
+        size:root.width,root.height
+        Label:
+            text:"GIFTS FOR 16 TO 20 YEARS OLD"
+            color:1,0.603921,0.207843,1
+            font_name:'lob'
+            pos_hint:{"x":0.1,"top":1}
+            size_hint:0.8,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"SUN GLASSES" 
+            color:1,0.603921,0.207843,1
+            font_name:'lob'
+            pos_hint:{"x":0.1,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SUN GLASSES"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findsunglass()
+
+        Label:
+            text:"PHONE CASE" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING PHONE CASE"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findphonecase()
+
+        Label:
+            text:"RC CAR" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING RC CAR"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findrccar()
+
+        Label:
+            text:"SHOES" 
+            color:1,0.603921,0.207843,1
+            font_name:'lob'
+            pos_hint:{"x":0.1,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SHOES"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findshoes()
+
+        Button:
+            text:"GO BACK"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.1,"top":.17}
+            size_hint:0.8,0.17
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="right"
+
+<b20to40Window>:
+    canvas.before:
+        Color:
+            rgba:1,1,0.50196,1
+        Rectangle:
+            size:root.width,root.height
+    name:"b20-40"
+    FloatLayout:
+        size:root.width,root.height
+        Label:
+            text:"GIFTS FOR 20 TO 40 YEARS OLD"
+            color:1,0.603921,0.207843,1
+            font_name:'lob'
+            pos_hint:{"x":0.1,"top":1}
+            size_hint:0.8,0.142
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"SUN GLASSES" 
+            color:1,0.603921,0.207843,1
+            font_name:'lob'
+            pos_hint:{"x":0.1,"top":.858}
+            size_hint:0.4,0.142
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SUN GLASSES"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.858}
+            size_hint:0.4,0.142
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findsunglass()
+
+        Label:
+            text:"WATCH" 
+            color:1,0.603921,0.207843,1
+            font_name:'lob'
+            pos_hint:{"x":0.1,"top":.716}
+            size_hint:0.4,0.142
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING WATCH"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.716}
+            size_hint:0.4,0.142
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findwatch()
+
+        Label:
+            text:"LEATHER JACKET" 
+            color:1,0.603921,0.207843,1
+            font_name:'lob'
+            pos_hint:{"x":0.1,"top":.574}
+            size_hint:0.4,0.142
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING LEATHER JACKET"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.574}
+            size_hint:0.4,0.142
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findjacket()
+
+        Label:
+            text:"TRAVEL KIT" 
+            color:1,0.603921,0.207843,1
+            font_name:'lob'
+            pos_hint:{"x":0.1,"top":.432}
+            size_hint:0.4,0.142
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING TRAVEL KIT"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.432}
+            size_hint:0.4,0.142
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findtravel()
+
+        Label:
+            text:"HEADPHONESS" 
+            color:1,0.603921,0.207843,1
+            font_name:'lob'
+            pos_hint:{"x":0.1,"top":.29}
+            size_hint:0.4,0.142
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING HEADPHONESS"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.29}
+            size_hint:0.4,0.142
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findheadphones()
+
+
+        Button:
+            text:"GO BACK"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.1,"top":.148}
+            size_hint:0.8,0.148
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="right"
+
+
+
+<b40to60Window>:
+    canvas.before:
+        Color:
+            rgba:1,1,0.50196,1
+        Rectangle:
+            size:root.width,root.height
+    name:"b40-60"
+    FloatLayout:
+        size:root.width,root.height
+        Label:
+            text:"GIFTS FOR 20 TO 40 YEARS OLD"
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":1}
+            size_hint:0.8,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"SHAVING KIT" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SHAVING KIT"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findshaving()
+
+        Label:
+            text:"HOME SPEAKER" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING HOME SPEAKER"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findspeaker()
+
+        Label:
+            text:"SMART WATCH" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SMART WATCH"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findsmart()
+
+        Label:
+            text:"SHOES" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SHOES"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findshoes()
+
+        Button:
+            text:"GO BACK"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.1,"top":.17}
+            size_hint:0.8,0.17
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="right"
+
+
+<b60toaboveWindow>:
+    canvas.before:
+        Color:
+            rgba:1,1,0.50196,1
+        Rectangle:
+            size:root.width,root.height
+    name:"b60+"
+    FloatLayout:
+        size:root.width,root.height
+        Label:
+            text:"GIFTS FOR 60 AND ABOVE YEARS OLD"
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":1}
+            size_hint:0.8,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"SHAVING KIT" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SHAVING KIT"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.834}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findshaving()
+
+        Label:
+            text:"HOME SPEAKER"
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING HOME SPEAKER"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.668}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findspeaker()
+
+        Label:
+            text:"SUPPORT STICK" 
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SUPPORT STICK"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.502}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findsupport()
+
+        Label:
+            text:"ROCKING CHAIR"
+            font_name:'lob'
+            color:1,0.603921,0.207843,1
+            pos_hint:{"x":0.1,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING ROCKING CHAIR"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.5,"top":.336}
+            size_hint:0.4,0.166
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findrocking()
+
+        Button:
+            text:"GO BACK"
+            font_name:'lob'
+            color:1,1,0.50196,1
+            background_color:1,0.603921,0.207843,0.85
+            pos_hint:{"x":0.1,"top":.17}
+            size_hint:0.8,0.17
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="right"
+
+
+
+<WedingWindow>:
+    canvas.before:
+        Color:
+            rgba:1,0.6823529,0.474509,1
+        Rectangle:
+            size:root.width,root.height
+    name:"wed"
+    FloatLayout:
+        Label:
+            text:"GIFTS FOR WEDDING"
+            color:0.945098,0.3058823,0.3372549,1
+            font_name:'paci'
+            pos_hint:{"x":0.1,"top":1}
+            size_hint:0.8,0.1
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"SMART SPEAKER" 
+            color:0.945098,0.3058823,0.3372549,1
+            font_name:'paci'
+            pos_hint:{"x":0.1,"top":.9}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SMART SPEAKER"
+            color:1,0.6823529,0.474509,1
+            background_color:0.9529411,0.396078,0.4235294,0.8
+            font_name:'paci'
+            pos_hint:{"x":0.5,"top":.9}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findsmaspe()
+
+        Label:
+            text:"PHOTO FRAME" 
+            color:0.945098,0.3058823,0.3372549,1
+            font_name:'paci'
+            pos_hint:{"x":0.1,"top":.8}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING PHOTO FRAME"
+            color:1,0.6823529,0.474509,1
+            background_color:0.9529411,0.396078,0.4235294,0.8
+            font_name:'paci'
+            pos_hint:{"x":0.5,"top":.8}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findframe()
+
+        Label:
+            text:"SHOWPIECE" 
+            color:0.945098,0.3058823,0.3372549,1
+            font_name:'paci'
+            pos_hint:{"x":0.1,"top":.7}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SHOWPIECE"
+            color:1,0.6823529,0.474509,1
+            background_color:0.9529411,0.396078,0.4235294,0.8
+            font_name:'paci'
+            pos_hint:{"x":0.5,"top":.7}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findshow()
+
+        Label:
+            text:"KNIFE SET" 
+            color:0.945098,0.3058823,0.3372549,1
+            font_name:'paci'
+            pos_hint:{"x":0.1,"top":.6}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING KNIFE SET"
+            color:1,0.6823529,0.474509,1
+            background_color:0.9529411,0.396078,0.4235294,0.8
+            font_name:'paci'
+            pos_hint:{"x":0.5,"top":.6}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findknife()       
+
+        Label:
+            text:"CLOCK" 
+            color:0.945098,0.3058823,0.3372549,1
+            font_name:'paci'
+            pos_hint:{"x":0.1,"top":.5}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING CLOCK"
+            color:1,0.6823529,0.474509,1
+            background_color:0.9529411,0.396078,0.4235294,0.8
+            font_name:'paci'
+            pos_hint:{"x":0.5,"top":.5}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findclock()       
+
+        Label:
+            text:"COUPLE WATCH" 
+            color:0.945098,0.3058823,0.3372549,1
+            font_name:'paci'
+            pos_hint:{"x":0.1,"top":.4}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING COUPLE WATCH"
+            color:1,0.6823529,0.474509,1
+            background_color:0.9529411,0.396078,0.4235294,0.8
+            font_name:'paci'
+            pos_hint:{"x":0.5,"top":.4}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findcouwatch()   
+
+
+        Label:
+            text:"MATCHING CHAIN" 
+            color:0.945098,0.3058823,0.3372549,1
+            font_name:'paci'
+            pos_hint:{"x":0.1,"top":.3}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING MATCHING CHAIN"
+            color:1,0.6823529,0.474509,1
+            background_color:0.9529411,0.396078,0.4235294,0.8
+            font_name:'paci'
+            pos_hint:{"x":0.5,"top":.3}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findchain()   
+
+        Label:
+            text:"BEDSHEETS" 
+            color:0.945098,0.3058823,0.3372549,1
+            font_name:'paci'
+            pos_hint:{"x":0.1,"top":.2}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING BEDSHEETS"
+            color:1,0.6823529,0.474509,1
+            background_color:0.9529411,0.396078,0.4235294,0.8
+            font_name:'paci'
+            pos_hint:{"x":0.5,"top":.2}
+            size_hint:0.4,0.1
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findsheet()   
+
+
+        Button:
+            text:"GO BACK"
+            color:1,0.6823529,0.474509,1
+            background_color:0.9529411,0.396078,0.4235294,0.8
+            font_name:'paci'
+            pos_hint:{"x":0.1,"top":.1}
+            size_hint:0.6,0.1
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="right"
+                
+            
+
+    
+
+<AnniversaryWindow>:
+    canvas.before:
+        Color:
+            rgba:0.7843137,0.5098039,0.7843137,1
+        Rectangle:
+            size:root.width,root.height
+    name:"anni"
+    FloatLayout:
+        size:root.width,root.height
+        Button:
+            text:"1 TO 10 YEAR ANNIVERSARY"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            size_hint:0.8,0.25
+            pos_hint:{"x":0.1,"top":1}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="up"
+                root.wood()
+
+        Button:
+            text:"10 TO 30 YEAR ANNIVERSARY"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            size_hint:0.8,0.25
+            pos_hint:{"x":0.1,"top":0.75}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="up"
+                root.tin()
+        
+        Button:
+            text:"30 AND ABOVE YEARS ANNIVERSARY"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            size_hint:0.8,0.25
+            pos_hint:{"x":0.1,"top":0.50}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="up"
+                root.crys()
+
+        Button:
+            text:"GO BACK"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            size_hint:0.8,0.25
+            pos_hint:{"x":0.1,"top":0.25}
+            font_size:(root.width**2+root.height**2)/14**4
+            on_release:
+                root.manager.transition.direction="right"
+                root.ocas()
+
+
+<an10to30>:
+    canvas.before:
+        Color:
+            rgba:0.7843137,0.5098039,0.7843137,1
+        Rectangle:
+            size:root.width,root.height
+    name:"tin"
+    FloatLayout:
+        size:root.width,root.height
+        Label:
+            text:"GIFTS FOR 10 TO 30 YEAR ANNIVERSARY"
+            color:0.58823529,0.2627450,0.6117647,1
+            pos_hint:{"x":0.1,"top":1}
+            font_name:'quick'
+            size_hint:0.8,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"MATCHING TSHIRTS" 
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.8}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING MATCHING TSHIRTS"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.5,"top":.8}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findshirt()
+
+        Label:
+            text:"ANNIVERSARY CARD" 
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.60}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING ANNIVERSARY CARD"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.5,"top":.6}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findcard()
+
+        Label:
+            text:"SHOWPIECE" 
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.4}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SHOWPIECE"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.5,"top":.4}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findshow()
+
+        Button:
+            text:"GO BACK"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.2}
+            size_hint:0.8,0.2
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="right"
+
+
+<an1to10>:
+    canvas.before:
+        Color:
+            rgba:0.7843137,0.5098039,0.7843137,1
+        Rectangle:
+            size:root.width,root.height
+    name:"wood"
+    FloatLayout:
+        size:root.width,root.height
+        Label:
+            text:"GIFTS FOR 1 TO 10 YEAR ANNIVERSARY"
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":1}
+            size_hint:0.8,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"CLOCK WITH PHOTO" 
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.8}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING CLOCK WITH PHOTO"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.5,"top":.8}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findphoto()
+
+        Label:
+            text:"PHOTO FRAME" 
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.6}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING PHOTO FRAME"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.5,"top":.6}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findframe()
+
+        Label:
+            text:"CHOCLATES" 
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.4}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING CHOCLATES"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.5,"top":.4}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findchoc()
+
+        Button:
+            text:"GO BACK"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.2}
+            size_hint:0.8,0.2
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="right"
+
+<an30toabove>:
+    canvas.before:
+        Color:
+            rgba:0.7843137,0.5098039,0.7843137,1
+        Rectangle:
+            size:root.width,root.height
+    name:"crys"
+    FloatLayout:
+        size:root.width,root.height
+        Label:
+            text:"GIFTS FOR 30 TO ABOVE YEARS ANNIVERSARY"
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":1}
+            size_hint:0.8,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Label:
+            text:"PHOTO FRAME" 
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.8}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING PHOTO FRAME"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.5,"top":.8}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findframe()
+        Label:
+            text:"ANNIVERSARY CARD" 
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.6}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING ANNIVERSARY CARD"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.5,"top":.6}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/16**4      
+            on_release:
+                root.findcard()
+
+        Label:
+            text:"SHOWPIECE" 
+            color:0.58823529,0.2627450,0.6117647,1
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.4}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/14**4
+        Button:
+            text:"PRESS FOR BUYING SHOWPIECE"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.5,"top":.4}
+            size_hint:0.4,0.2
+            font_size:(root.width**2+root.height**2)/15**4      
+            on_release:
+                root.findshow()
+
+        Button:
+            text:"GO BACK"
+            color:0.7843137,0.5098039,0.7843137,1
+            background_color:0.7843137,0.5098039,0.7843137,0.8
+            font_name:'quick'
+            pos_hint:{"x":0.1,"top":.2}
+            size_hint:0.8,0.2
+            font_size:(root.width**2+root.height**2)/14**4      
+            on_release:
+                root.backto()
+                root.manager.transition.direction="right"
+
+
